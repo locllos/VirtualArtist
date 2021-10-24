@@ -1,4 +1,4 @@
-#include "../../inc/core/field.h"
+#include "field.h"
 
 FieldRectangle::FieldRectangle(const FieldRectangle& other)
 {
@@ -37,9 +37,7 @@ int Field::height() const
     return height_;
 }
 
-void Field::DrawGraphComponent(GraphComponent* graph)
+void Field::DrawGraphComponent(GraphicComponent* graph)
 {
-    graph->fitToDisplay(scale, is_stretchable_);
-
     graph->Draw(display_);
 }

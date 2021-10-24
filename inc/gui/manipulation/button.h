@@ -1,6 +1,4 @@
-#pragma once
-
-#include "../frame.h"
+#include "frame.h"
 #include "command.h"
 
 class AbstractButton : public AbstractFrame

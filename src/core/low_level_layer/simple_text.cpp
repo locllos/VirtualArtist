@@ -18,7 +18,7 @@ SimpleText::SimpleText(const Display& display, const char* font_path, char* text
 void SimpleText::initFont()
 {   
     if (font_ != nullptr) return;
-    
+
     font_ = TTF_OpenFont(font_path_, font_size_);
 
     SDL_Surface* text_surface = TTF_RenderText_Blended(font_, text_, convertDefaultColorToSDL(color_));
@@ -49,13 +49,14 @@ void SimpleText::changeFontSize(int font_size)
 void SimpleText::Draw(const PixelPoint& point)
 {   
     if (font_ == nullptr) initFont();
-
+    
     int text_width = 0;
     int text_height = 0;
 
     SDL_QueryTexture(text_texture_, nullptr, nullptr, &text_width, &text_height);
 
     SDL_Rect texture_rect = {point.x, point.y, text_width, text_height};
+
     SDL_RenderCopy(renderer_, text_texture_, nullptr, &texture_rect);
 }
 

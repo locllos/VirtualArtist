@@ -1,25 +1,22 @@
 #pragma once
 
 #include "graphic.h"
-#include "../../core/field.h"
+#include "field.h"
 
 
-class FilledRectangle : public GraphComponent
+class FilledRectangle : public GraphicComponent
 {
 private:
 
-    int field_width_;
-    int field_height_;
+    int width_;
+    int height_;
 
-    int display_width_;
-    int display_height_;
+    Color color_;    
 
 public:
 
     FilledRectangle() = default;
-    FilledRectangle(const FieldRectangle& area, const Color& color);
-
-    void fitToDisplay(int scale, bool is_stretchable) override;
+    FilledRectangle(const Rectangle& area, const Color& color);
 
     void Draw(Display* display) override;
 

@@ -1,21 +1,21 @@
+#pragma once
+
 #include "graphic.h"
 
-class FilledCircle : public GraphComponent
+
+class FilledCircle : public GraphicComponent
 {
 private:
 
-    int display_radius_;
-    float field_radius_;
+    Color color_;
+
+    int radius_;
 
 public:
 
     FilledCircle() = default;
-    FilledCircle(const Vector2<float>& coord, const Color& color, float radius);
+    FilledCircle(const PixelPoint& pos, const Color& color, int radius);
     FilledCircle(const Color& color);
 
-    void Draw(Display* display) override;  
-
-    void fitToDisplay(int scale, bool is_stretchable) override;
-    
-    virtual ~FilledCircle() = default;
+    void Draw(Display* display) override;
 };

@@ -1,8 +1,7 @@
 #pragma once
 
 #include "display.h"
-#include "string.h"
-#include <SDL2/SDL_ttf.h>
+#include <string.h>
 
 class SimpleText
 {

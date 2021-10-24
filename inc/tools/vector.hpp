@@ -42,7 +42,7 @@ public:
     {
         elem_t length = getLength();
 
-        return length > 0 ? acos(x / getLength()) : PI / 2
+        return length > 0 ? acos(x / getLength()) : PI / 2;
     }
 
     Vector2& operator=(const Vector2& copy_vector)
@@ -121,8 +121,8 @@ public:
     
     void Rotate(elem_t angle)
     {
-        elem_t sina = sin(rotation_angle);
-        elem_t cosa = cos(rotation_angle);
+        elem_t sina = sin(angle);
+        elem_t cosa = cos(angle);
 
         elem_t x_component = x;
         elem_t y_component = y;

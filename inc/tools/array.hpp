@@ -47,7 +47,20 @@ public:
     {
         capacity_ = capacity == 0 ? 1 : capacity;
 
-        data_ = new elem_t[capacity];
+        data_ = new elem_t[capacity_];
+    }
+
+    Array(const elem_t& initializer, size_t size) : size_(0)
+    {
+        capacity_ = (size == 0) ? 1 : size;
+        size_ = (size == 0) ? 1 : size;
+
+        data_ = new elem_t[capacity_];
+
+        for (int i = 0; i < size_; ++i)
+        {
+            data_[i] = initializer;
+        }
     }
 
     Array(elem_t* begin, elem_t* end)
@@ -114,7 +127,7 @@ public:
         size_ = new_size;
     }
 
-    elem_t operator[](size_t i)
+    elem_t& operator[](size_t i)
     {
         return data_[i];
     }

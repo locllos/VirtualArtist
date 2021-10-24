@@ -1,5 +1,5 @@
-#include "../../inc/core/low_level_layer/display.h"
-
+#include "display.h"
+#include <string.h>
 
 const float PI = 3.14159265359;
 const float ARROW_ANGLE = PI / 12;
@@ -41,7 +41,7 @@ Color convertSDLColorToDefault(const SDL_Color& sdl_color)
     return color;
 }
 
-SDL_Color convertDefaultColorToSDL(Color color)
+SDL_Color convertDefaultColorToSDL(const Color& color)
 {
     return (SDL_Color){color.red, color.green, color.blue, color.alpha};
 }
@@ -94,12 +94,118 @@ const PixelPoint& PixelPoint::operator=(const PixelPoint& rhs_point)
     return *this;
 }
 
+void PixelPoint::Dump()
+{
+    cout << "(" << x << ", " << y << ") " << endl;
+}
+
 bool Rectangle::isWithin(const PixelPoint& point) const
 {
     return x <= point.x && (x + width - 1) >= point.x &&
            y <= point.y && (y + height - 1) >= point.y;
 }
 
+//==================================================//
+//                    Texture                       //
+//==================================================//
+
+bool isBMPFormat(const char* string)
+{
+    return strcmp(string, BMP_FORMAT) == 0;
+}
+
+bool isJPGFormat(const char* string)
+{
+    return strcmp(string, JPG_FORMAT) == 0;
+}
+
+bool isPNGFormat(const char* string)
+{
+    return strcmp(string, PNG_FORMAT) == 0;
+}
+
+Texture::Texture() 
+    : width_(0)
+    , height_(0)
+    , native_texture_(nullptr)
+    {};
+
+Texture::Texture(const Display& display, 
+                 const char* picture_path, int width, int height)
+        : width_(width < 0 ? 0 : width)
+        , height_(height < 0 ? 0 : height)
+        , native_texture_(IMG_LoadTexture(display.renderer(), picture_path)) 
+{
+    if (height == -1 || width == -1)
+    {
+        SDL_QueryTexture(native_texture_, nullptr, nullptr, 
+                         &width_, &height_);
+    }
+}
+
+Texture::Texture(const Display& display, int width, int height, 
+                        uint32_t format, int access)
+        : width_(width < 0 ? 0 : width)
+        , height_(height < 0 ? 0 : height)
+{
+    native_texture_ = SDL_CreateTexture(display.renderer(), format, access, width_, height_);
+}
+
+void Texture::Draw(Display* display, const PixelPoint& position)
+{   
+    SDL_Rect rectangle = convertDefaultRectangleToSDL({position.x, position.y, 
+                                                       width_, height_});
+
+    SDL_RenderCopy(display->renderer(), 
+                   native_texture_, nullptr, &rectangle);
+}
+
+void Texture::drawPoint(Display* display, 
+                        const PixelPoint& point, const Color& color)
+{
+    int result = SDL_SetRenderTarget(display->renderer(), native_texture_);
+
+    if (result < 0)
+    {
+        cout << "draw point at texture error: " << SDL_GetError() << endl;
+        return;
+    }
+    display->drawPoint(point, color);
+
+    SDL_SetRenderTarget(display->renderer(), nullptr);
+}
+
+void Texture::drawRectangle(Display* display, 
+                            const Rectangle& rectangle, const Color& color)
+{
+    int result = SDL_SetRenderTarget(display->renderer(), native_texture_);
+
+    if (result < 0)
+    {
+        cout << "draw point at texture error: " << SDL_GetError() << endl;
+        return;
+    }
+    display->fillRect(rectangle, color);
+
+    SDL_SetRenderTarget(display->renderer(), nullptr);
+}
+
+int Texture::width()  const {return width_;}
+int Texture::height() const {return height_;}
+
+bool Texture::isInitialized()
+{
+    return native_texture_ != nullptr;
+}
+
+Texture::~Texture()
+{
+    SDL_DestroyTexture(native_texture_);
+}
+
+//==================================================//
+//                    Display                       //
+//==================================================//
 Display::Display(const char* title,
                  size_t width, size_t height, 
                  size_t x_pos, size_t y_pos, 
@@ -110,7 +216,17 @@ Display::Display(const char* title,
         SDL_Log("Unable to initialize SDL: %s", SDL_GetError());
         return;
     }
-    
+ 	if (TTF_Init() == -1) 
+    {
+        cout << "TTF_Init error: " << TTF_GetError() << endl;
+        return;
+    }
+    if ((IMG_Init(IMG_INIT_FLAGS) & IMG_INIT_FLAGS) != IMG_INIT_FLAGS)
+    {
+        cout << "IMG_Init error" << IMG_GetError() << endl;
+        return;
+    } 
+
     width_ = int(width);
     height_ = int(height);
 

@@ -1,8 +1,8 @@
 #pragma once
-
-#include "low_level_layer/display.h"
-#include "../gui/graphic/graphic.h"
-#include "../tools/vector.hpp"
+// does not use
+#include "display.h"
+#include "graphic.h"
+#include "vector.hpp"
 
 struct FieldRectangle
 {
@@ -37,7 +37,7 @@ public:
     int width() const;
     int height() const;
 
-    void DrawGraphComponent(GraphComponent* graph);
+    void DrawGraphComponent(GraphicComponent* graph);
 
     ~Field() = default;
 };

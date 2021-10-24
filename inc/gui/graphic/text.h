@@ -1,23 +1,20 @@
 #include "graphic.h"
-#include "../../core/low_level_layer/simple_text.h"
+#include "simple_text.h"
 
 
-class Text : public GraphComponent
+class Text : public GraphicComponent
 {
 private:
 
-    SimpleText text_;
+    Color color_;
     
-    int display_font_size_;
-    float field_font_size_;
+    SimpleText text_;
 
 public:
 
     Text(const Display& display, const Color& color,
-         const Vector2<float>& coord, 
+         const PixelPoint& pos, 
          const char* font_path, char* text, float font_size);
 
     void Draw(Display* display) override;
-
-    void fitToDisplay(int scale, bool is_stretchable) override;
 };
