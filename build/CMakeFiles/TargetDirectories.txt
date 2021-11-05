@@ -1,0 +1,5 @@
+/home/locllos/Documents/Projects/VirtualArtist/build/CMakeFiles/edit_cache.dir
+/home/locllos/Documents/Projects/VirtualArtist/build/CMakeFiles/package_source.dir
+/home/locllos/Documents/Projects/VirtualArtist/build/CMakeFiles/rebuild_cache.dir
+/home/locllos/Documents/Projects/VirtualArtist/build/CMakeFiles/package.dir
+/home/locllos/Documents/Projects/VirtualArtist/build/CMakeFiles/VirtualArtist.dir

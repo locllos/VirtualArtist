@@ -1,7 +1,6 @@
-#include "filled_rectangle.h"
-#include "filled_circle.h"
-#include "simple_text.h"
+#include "canvas.h"
 #include "graphic_frame.h"
+#include "paint_canvas.h"
 
 const char* ANCIENT_STYLE_GUI[] =
 {   
@@ -21,6 +20,63 @@ const char* ANCIENT_STYLE_GUI[] =
     "/home/locllos/Documents/Projects/VirtualArtist/res/gui/bottom-left.png",
 };
 
+const char* SIMPLE_STYLE_GUI[] =
+{
+    nullptr,
+
+    "/home/locllos/Documents/Projects/VirtualArtist/res/gui/title_theme.png",
+    "/home/locllos/Documents/Projects/VirtualArtist/res/gui/title_theme.png",
+    "/home/locllos/Documents/Projects/VirtualArtist/res/gui/title_theme.png",
+    "/home/locllos/Documents/Projects/VirtualArtist/res/gui/title_theme.png",
+    "/home/locllos/Documents/Projects/VirtualArtist/res/gui/title_theme.png",
+    "/home/locllos/Documents/Projects/VirtualArtist/res/gui/title_theme.png",
+    "/home/locllos/Documents/Projects/VirtualArtist/res/gui/title_theme.png",
+    "/home/locllos/Documents/Projects/VirtualArtist/res/gui/title_theme.png",
+};
+
+int main()
+{   
+    Display display("fucked up");
+    
+    PaintBrush paint_brush = {{0, 0}, {0, 255, 0, 255}, 5, false};
+    Rectangle area = {50 + 26, 50 + 20, 520 - 50 - 2, 400 - 50 + 10};
+    DrawableTexture* texture = new DrawableTexture(display, area);
+    Command* command = new PaintCanvas(texture->pos(), &display, &paint_brush, texture);
+    GraphicFrame* frame = new GraphicFrame(display, {50, 50, 520, 400}, SIMPLE_STYLE_GUI, 20);
+
+    Widget canvas_frame({50, 50, 520, 400}, frame, nullptr);
+    Canvas canvas(area, &display, texture, command, &paint_brush);
+
+    canvas_frame.addSubWidget(&canvas);
+
+    HardwareEvent hw_event = {};
+
+    bool is_closed = false;
+    canvas_frame.Draw(&display);
+    display.Present();
+    while (!is_closed)
+    {
+        while (pollHardWareEvent(&hw_event))
+        {   
+            if (canvas_frame.eventFeedback(hw_event) == REPLIED)
+            {
+                canvas_frame.Draw(&display);
+                display.Present();
+                
+                cout << "replied";
+            }
+            else
+            {
+                cout << "ignored";
+            }
+            cout << endl;
+        }
+    }
+
+    return 0;
+}
+
+/*
 int main() 
 {   
     Display display("Nam pizda");
@@ -66,3 +122,4 @@ int main()
 
     return 0;
 }
+*/

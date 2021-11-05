@@ -12,7 +12,7 @@ include_directories(VirtualArtist
                     inc/core/low_level_layer               
 
                     inc/gui/graphic
-                    inc/gui/manipulation
+                    inc/gui/commands
                     
                     inc/tools)
 
@@ -30,16 +30,19 @@ add_executable(VirtualArtist
                 src/core/field.cpp
                 
                 # gui
+                # ...graphic
                 src/gui/graphic/filled_circle.cpp
                 src/gui/graphic/filled_rectangle.cpp
                 src/gui/graphic/text.cpp
                 src/gui/graphic/graphic_frame.cpp
-
-                src/gui/manipulation/button.cpp
-                src/gui/manipulation/command.cpp
-
+                src/gui/graphic/drawable_texture.cpp
+                
+                #...commands
+                src/gui/commands/paint_canvas.cpp
+                
+                src/gui/widget.cpp
+                src/gui/software_event.cpp
                 src/gui/canvas.cpp
-                src/gui/frame.cpp
-               )
+)
 
 target_link_libraries(VirtualArtist SDL2 SDL2_image SDL2_ttf)

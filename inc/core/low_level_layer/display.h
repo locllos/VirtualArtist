@@ -47,7 +47,6 @@ struct PixelPoint
     void Dump();
 };
 
-
 struct MouseState
 {
     PixelPoint position;
@@ -172,8 +171,12 @@ public:
 
     void Draw(Display* display, const PixelPoint& position);
     void drawPoint(Display* display, const PixelPoint& point, const Color& color);
-    void drawRectangle(Display* display, const Rectangle& rectangle, const Color& color);
+    void drawLine(Display* display, 
+                  const PixelPoint& first, const PixelPoint& second, const Color& color,
+                  size_t thickness = 1);
 
+    void drawRectangle(Display* display, const Rectangle& rectangle, const Color& color);
+    
     int width() const;
     int height() const;
 

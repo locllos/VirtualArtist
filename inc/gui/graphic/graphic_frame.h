@@ -20,7 +20,7 @@ enum COMPOSITE_TYPE
     AMOUNT_PARTS,
 };
 
-class GraphicFrame : GraphicComponent
+class GraphicFrame : public GraphicComponent
 {
 private:
 
@@ -45,8 +45,6 @@ private:
     void drawCorners(Display* display);
 
 public:
-
-    GraphicFrame(const Rectangle& area, int sprite_scale = DEFAULT_SPRITE_SCALE);
 
     /**
      * @brief sprite_paths contains 9 strings, where second 8 string necessarily non-empty, 

@@ -1,3 +1,5 @@
+#pragma once
+
 template <typename elem_t>
 struct Node
 {
@@ -27,12 +29,12 @@ public:
         tail_ = nullptr;
     };
 
-    Node<elem_t>* getHead()
+    Node<elem_t>* head()
     {
         return head_;
     }
 
-    Node<elem_t>* getTail()
+    Node<elem_t>* tail()
     {
         return tail_;
     }
@@ -57,6 +59,30 @@ public:
     void Append(elem_t elem)
     {
         Append(new Node<elem_t>(elem));
+    }
+
+    void makeHead(Node<elem_t>* node)
+    {   
+        if (head_ == nullptr)
+        {
+            head_ = node;
+        }
+        if (node == head_)
+        {
+            return;
+        }
+        if (node->next != nullptr)
+        {
+            node->next->prev = node->prev;
+        }
+        if (node->prev != nullptr)
+        {
+            node->prev->next = node->next;
+        }
+        node->next = head_;
+        node->prev = nullptr;
+
+        head_->prev = node;
     }
 
 

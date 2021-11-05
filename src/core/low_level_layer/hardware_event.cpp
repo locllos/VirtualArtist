@@ -1,6 +1,6 @@
 #include "hardware_event.h"
 
-bool pollHardWareEvent(HardWareEvent* hw_event)
+bool pollHardWareEvent(HardwareEvent* hw_event)
 {
     SDL_Event low_level_event = {};
 
@@ -28,7 +28,7 @@ bool pollHardWareEvent(HardWareEvent* hw_event)
                 return false;
         }
         
-        hw_event->type = low_level_event.type;
+        hw_event->type = static_cast<HardwareEventType>(low_level_event.type);
         return true;
     }
     return false;

@@ -1,16 +1,7 @@
 #include "graphic_frame.h"
 
-GraphicFrame::GraphicFrame(const Rectangle& area, int sprite_scale)
-    : width_(area.width)
-    , height_(area.height)
-    , sprite_scale_(sprite_scale)
-    , textures_(AMOUNT_PARTS)
-{
-    pos_ = {area.x, area.y};
-}
-
 GraphicFrame::GraphicFrame(const Display& display, 
-                                   const Rectangle& area, const char* sprite_paths[], int sprite_scale)
+                           const Rectangle& area, const char* sprite_paths[], int sprite_scale)
     : width_(area.width)
     , height_(area.height)
     , sprite_scale_(sprite_scale)

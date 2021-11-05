@@ -1,0 +1,77 @@
+[
+{
+  "directory": "/home/locllos/Documents/Projects/VirtualArtist/build",
+  "command": "g++  -I/home/locllos/Documents/Projects/VirtualArtist/VirtualArtist -I/home/locllos/Documents/Projects/VirtualArtist/inc/core -I/home/locllos/Documents/Projects/VirtualArtist/inc/gui -I/home/locllos/Documents/Projects/VirtualArtist/inc/core/low_level_layer -I/home/locllos/Documents/Projects/VirtualArtist/inc/gui/graphic -I/home/locllos/Documents/Projects/VirtualArtist/inc/gui/commands -I/home/locllos/Documents/Projects/VirtualArtist/inc/tools  -Wall -Wextra -g -o CMakeFiles/VirtualArtist.dir/src/main.cpp.o -c /home/locllos/Documents/Projects/VirtualArtist/src/main.cpp",
+  "file": "/home/locllos/Documents/Projects/VirtualArtist/src/main.cpp"
+},
+{
+  "directory": "/home/locllos/Documents/Projects/VirtualArtist/build",
+  "command": "g++  -I/home/locllos/Documents/Projects/VirtualArtist/VirtualArtist -I/home/locllos/Documents/Projects/VirtualArtist/inc/core -I/home/locllos/Documents/Projects/VirtualArtist/inc/gui -I/home/locllos/Documents/Projects/VirtualArtist/inc/core/low_level_layer -I/home/locllos/Documents/Projects/VirtualArtist/inc/gui/graphic -I/home/locllos/Documents/Projects/VirtualArtist/inc/gui/commands -I/home/locllos/Documents/Projects/VirtualArtist/inc/tools  -Wall -Wextra -g -o CMakeFiles/VirtualArtist.dir/src/core/low_level_layer/display.cpp.o -c /home/locllos/Documents/Projects/VirtualArtist/src/core/low_level_layer/display.cpp",
+  "file": "/home/locllos/Documents/Projects/VirtualArtist/src/core/low_level_layer/display.cpp"
+},
+{
+  "directory": "/home/locllos/Documents/Projects/VirtualArtist/build",
+  "command": "g++  -I/home/locllos/Documents/Projects/VirtualArtist/VirtualArtist -I/home/locllos/Documents/Projects/VirtualArtist/inc/core -I/home/locllos/Documents/Projects/VirtualArtist/inc/gui -I/home/locllos/Documents/Projects/VirtualArtist/inc/core/low_level_layer -I/home/locllos/Documents/Projects/VirtualArtist/inc/gui/graphic -I/home/locllos/Documents/Projects/VirtualArtist/inc/gui/commands -I/home/locllos/Documents/Projects/VirtualArtist/inc/tools  -Wall -Wextra -g -o CMakeFiles/VirtualArtist.dir/src/core/low_level_layer/simple_text.cpp.o -c /home/locllos/Documents/Projects/VirtualArtist/src/core/low_level_layer/simple_text.cpp",
+  "file": "/home/locllos/Documents/Projects/VirtualArtist/src/core/low_level_layer/simple_text.cpp"
+},
+{
+  "directory": "/home/locllos/Documents/Projects/VirtualArtist/build",
+  "command": "g++  -I/home/locllos/Documents/Projects/VirtualArtist/VirtualArtist -I/home/locllos/Documents/Projects/VirtualArtist/inc/core -I/home/locllos/Documents/Projects/VirtualArtist/inc/gui -I/home/locllos/Documents/Projects/VirtualArtist/inc/core/low_level_layer -I/home/locllos/Documents/Projects/VirtualArtist/inc/gui/graphic -I/home/locllos/Documents/Projects/VirtualArtist/inc/gui/commands -I/home/locllos/Documents/Projects/VirtualArtist/inc/tools  -Wall -Wextra -g -o CMakeFiles/VirtualArtist.dir/src/core/low_level_layer/surface.cpp.o -c /home/locllos/Documents/Projects/VirtualArtist/src/core/low_level_layer/surface.cpp",
+  "file": "/home/locllos/Documents/Projects/VirtualArtist/src/core/low_level_layer/surface.cpp"
+},
+{
+  "directory": "/home/locllos/Documents/Projects/VirtualArtist/build",
+  "command": "g++  -I/home/locllos/Documents/Projects/VirtualArtist/VirtualArtist -I/home/locllos/Documents/Projects/VirtualArtist/inc/core -I/home/locllos/Documents/Projects/VirtualArtist/inc/gui -I/home/locllos/Documents/Projects/VirtualArtist/inc/core/low_level_layer -I/home/locllos/Documents/Projects/VirtualArtist/inc/gui/graphic -I/home/locllos/Documents/Projects/VirtualArtist/inc/gui/commands -I/home/locllos/Documents/Projects/VirtualArtist/inc/tools  -Wall -Wextra -g -o CMakeFiles/VirtualArtist.dir/src/core/low_level_layer/hardware_event.cpp.o -c /home/locllos/Documents/Projects/VirtualArtist/src/core/low_level_layer/hardware_event.cpp",
+  "file": "/home/locllos/Documents/Projects/VirtualArtist/src/core/low_level_layer/hardware_event.cpp"
+},
+{
+  "directory": "/home/locllos/Documents/Projects/VirtualArtist/build",
+  "command": "g++  -I/home/locllos/Documents/Projects/VirtualArtist/VirtualArtist -I/home/locllos/Documents/Projects/VirtualArtist/inc/core -I/home/locllos/Documents/Projects/VirtualArtist/inc/gui -I/home/locllos/Documents/Projects/VirtualArtist/inc/core/low_level_layer -I/home/locllos/Documents/Projects/VirtualArtist/inc/gui/graphic -I/home/locllos/Documents/Projects/VirtualArtist/inc/gui/commands -I/home/locllos/Documents/Projects/VirtualArtist/inc/tools  -Wall -Wextra -g -o CMakeFiles/VirtualArtist.dir/src/core/field.cpp.o -c /home/locllos/Documents/Projects/VirtualArtist/src/core/field.cpp",
+  "file": "/home/locllos/Documents/Projects/VirtualArtist/src/core/field.cpp"
+},
+{
+  "directory": "/home/locllos/Documents/Projects/VirtualArtist/build",
+  "command": "g++  -I/home/locllos/Documents/Projects/VirtualArtist/VirtualArtist -I/home/locllos/Documents/Projects/VirtualArtist/inc/core -I/home/locllos/Documents/Projects/VirtualArtist/inc/gui -I/home/locllos/Documents/Projects/VirtualArtist/inc/core/low_level_layer -I/home/locllos/Documents/Projects/VirtualArtist/inc/gui/graphic -I/home/locllos/Documents/Projects/VirtualArtist/inc/gui/commands -I/home/locllos/Documents/Projects/VirtualArtist/inc/tools  -Wall -Wextra -g -o CMakeFiles/VirtualArtist.dir/src/gui/graphic/filled_circle.cpp.o -c /home/locllos/Documents/Projects/VirtualArtist/src/gui/graphic/filled_circle.cpp",
+  "file": "/home/locllos/Documents/Projects/VirtualArtist/src/gui/graphic/filled_circle.cpp"
+},
+{
+  "directory": "/home/locllos/Documents/Projects/VirtualArtist/build",
+  "command": "g++  -I/home/locllos/Documents/Projects/VirtualArtist/VirtualArtist -I/home/locllos/Documents/Projects/VirtualArtist/inc/core -I/home/locllos/Documents/Projects/VirtualArtist/inc/gui -I/home/locllos/Documents/Projects/VirtualArtist/inc/core/low_level_layer -I/home/locllos/Documents/Projects/VirtualArtist/inc/gui/graphic -I/home/locllos/Documents/Projects/VirtualArtist/inc/gui/commands -I/home/locllos/Documents/Projects/VirtualArtist/inc/tools  -Wall -Wextra -g -o CMakeFiles/VirtualArtist.dir/src/gui/graphic/filled_rectangle.cpp.o -c /home/locllos/Documents/Projects/VirtualArtist/src/gui/graphic/filled_rectangle.cpp",
+  "file": "/home/locllos/Documents/Projects/VirtualArtist/src/gui/graphic/filled_rectangle.cpp"
+},
+{
+  "directory": "/home/locllos/Documents/Projects/VirtualArtist/build",
+  "command": "g++  -I/home/locllos/Documents/Projects/VirtualArtist/VirtualArtist -I/home/locllos/Documents/Projects/VirtualArtist/inc/core -I/home/locllos/Documents/Projects/VirtualArtist/inc/gui -I/home/locllos/Documents/Projects/VirtualArtist/inc/core/low_level_layer -I/home/locllos/Documents/Projects/VirtualArtist/inc/gui/graphic -I/home/locllos/Documents/Projects/VirtualArtist/inc/gui/commands -I/home/locllos/Documents/Projects/VirtualArtist/inc/tools  -Wall -Wextra -g -o CMakeFiles/VirtualArtist.dir/src/gui/graphic/text.cpp.o -c /home/locllos/Documents/Projects/VirtualArtist/src/gui/graphic/text.cpp",
+  "file": "/home/locllos/Documents/Projects/VirtualArtist/src/gui/graphic/text.cpp"
+},
+{
+  "directory": "/home/locllos/Documents/Projects/VirtualArtist/build",
+  "command": "g++  -I/home/locllos/Documents/Projects/VirtualArtist/VirtualArtist -I/home/locllos/Documents/Projects/VirtualArtist/inc/core -I/home/locllos/Documents/Projects/VirtualArtist/inc/gui -I/home/locllos/Documents/Projects/VirtualArtist/inc/core/low_level_layer -I/home/locllos/Documents/Projects/VirtualArtist/inc/gui/graphic -I/home/locllos/Documents/Projects/VirtualArtist/inc/gui/commands -I/home/locllos/Documents/Projects/VirtualArtist/inc/tools  -Wall -Wextra -g -o CMakeFiles/VirtualArtist.dir/src/gui/graphic/graphic_frame.cpp.o -c /home/locllos/Documents/Projects/VirtualArtist/src/gui/graphic/graphic_frame.cpp",
+  "file": "/home/locllos/Documents/Projects/VirtualArtist/src/gui/graphic/graphic_frame.cpp"
+},
+{
+  "directory": "/home/locllos/Documents/Projects/VirtualArtist/build",
+  "command": "g++  -I/home/locllos/Documents/Projects/VirtualArtist/VirtualArtist -I/home/locllos/Documents/Projects/VirtualArtist/inc/core -I/home/locllos/Documents/Projects/VirtualArtist/inc/gui -I/home/locllos/Documents/Projects/VirtualArtist/inc/core/low_level_layer -I/home/locllos/Documents/Projects/VirtualArtist/inc/gui/graphic -I/home/locllos/Documents/Projects/VirtualArtist/inc/gui/commands -I/home/locllos/Documents/Projects/VirtualArtist/inc/tools  -Wall -Wextra -g -o CMakeFiles/VirtualArtist.dir/src/gui/graphic/drawable_texture.cpp.o -c /home/locllos/Documents/Projects/VirtualArtist/src/gui/graphic/drawable_texture.cpp",
+  "file": "/home/locllos/Documents/Projects/VirtualArtist/src/gui/graphic/drawable_texture.cpp"
+},
+{
+  "directory": "/home/locllos/Documents/Projects/VirtualArtist/build",
+  "command": "g++  -I/home/locllos/Documents/Projects/VirtualArtist/VirtualArtist -I/home/locllos/Documents/Projects/VirtualArtist/inc/core -I/home/locllos/Documents/Projects/VirtualArtist/inc/gui -I/home/locllos/Documents/Projects/VirtualArtist/inc/core/low_level_layer -I/home/locllos/Documents/Projects/VirtualArtist/inc/gui/graphic -I/home/locllos/Documents/Projects/VirtualArtist/inc/gui/commands -I/home/locllos/Documents/Projects/VirtualArtist/inc/tools  -Wall -Wextra -g -o CMakeFiles/VirtualArtist.dir/src/gui/commands/paint_canvas.cpp.o -c /home/locllos/Documents/Projects/VirtualArtist/src/gui/commands/paint_canvas.cpp",
+  "file": "/home/locllos/Documents/Projects/VirtualArtist/src/gui/commands/paint_canvas.cpp"
+},
+{
+  "directory": "/home/locllos/Documents/Projects/VirtualArtist/build",
+  "command": "g++  -I/home/locllos/Documents/Projects/VirtualArtist/VirtualArtist -I/home/locllos/Documents/Projects/VirtualArtist/inc/core -I/home/locllos/Documents/Projects/VirtualArtist/inc/gui -I/home/locllos/Documents/Projects/VirtualArtist/inc/core/low_level_layer -I/home/locllos/Documents/Projects/VirtualArtist/inc/gui/graphic -I/home/locllos/Documents/Projects/VirtualArtist/inc/gui/commands -I/home/locllos/Documents/Projects/VirtualArtist/inc/tools  -Wall -Wextra -g -o CMakeFiles/VirtualArtist.dir/src/gui/widget.cpp.o -c /home/locllos/Documents/Projects/VirtualArtist/src/gui/widget.cpp",
+  "file": "/home/locllos/Documents/Projects/VirtualArtist/src/gui/widget.cpp"
+},
+{
+  "directory": "/home/locllos/Documents/Projects/VirtualArtist/build",
+  "command": "g++  -I/home/locllos/Documents/Projects/VirtualArtist/VirtualArtist -I/home/locllos/Documents/Projects/VirtualArtist/inc/core -I/home/locllos/Documents/Projects/VirtualArtist/inc/gui -I/home/locllos/Documents/Projects/VirtualArtist/inc/core/low_level_layer -I/home/locllos/Documents/Projects/VirtualArtist/inc/gui/graphic -I/home/locllos/Documents/Projects/VirtualArtist/inc/gui/commands -I/home/locllos/Documents/Projects/VirtualArtist/inc/tools  -Wall -Wextra -g -o CMakeFiles/VirtualArtist.dir/src/gui/software_event.cpp.o -c /home/locllos/Documents/Projects/VirtualArtist/src/gui/software_event.cpp",
+  "file": "/home/locllos/Documents/Projects/VirtualArtist/src/gui/software_event.cpp"
+},
+{
+  "directory": "/home/locllos/Documents/Projects/VirtualArtist/build",
+  "command": "g++  -I/home/locllos/Documents/Projects/VirtualArtist/VirtualArtist -I/home/locllos/Documents/Projects/VirtualArtist/inc/core -I/home/locllos/Documents/Projects/VirtualArtist/inc/gui -I/home/locllos/Documents/Projects/VirtualArtist/inc/core/low_level_layer -I/home/locllos/Documents/Projects/VirtualArtist/inc/gui/graphic -I/home/locllos/Documents/Projects/VirtualArtist/inc/gui/commands -I/home/locllos/Documents/Projects/VirtualArtist/inc/tools  -Wall -Wextra -g -o CMakeFiles/VirtualArtist.dir/src/gui/canvas.cpp.o -c /home/locllos/Documents/Projects/VirtualArtist/src/gui/canvas.cpp",
+  "file": "/home/locllos/Documents/Projects/VirtualArtist/src/gui/canvas.cpp"
+}
+]

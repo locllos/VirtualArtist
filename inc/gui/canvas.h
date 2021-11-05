@@ -1,19 +1,34 @@
-#include "field.h"
+#pragma once
+
+#include "widget.h"
+#include "drawable_texture.h"
+
+const Color WHITE = {255, 255, 255, 255};
+
+struct PaintBrush
+{
+    PixelPoint cursor_position;
+
+    Color color;
+    int thickness;
+
+    bool is_active;
+};
 
 
-// нужен объект кисти, который меняется в зависимости от нажатой кнопки, из-за этого непонятно пока, что
-// делать с Canvas
-class Canvas : public AbstractFrame
+class Canvas : public Widget
 {
 private:
 
-    
+    PaintBrush* paint_brush_;
 
 public:
 
-    Canvas(const FieldRectangle& field_area);
+    Canvas() = delete;
+    Canvas(const Rectangle& area, Display* display,
+           DrawableTexture* texture, Command* command, PaintBrush* paint_brush);
 
-    // virtual void eventFeedback(/*some parametres*/) = 0;
+    FEEDBACK_TYPE eventFeedback(const HardwareEvent& hw_event) override;
 
-    ~Canvas();
+    ~Canvas() override = default;
 };

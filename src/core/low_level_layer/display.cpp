@@ -175,6 +175,17 @@ void Texture::drawPoint(Display* display,
     SDL_SetRenderTarget(display->renderer(), nullptr);
 }
 
+void Texture::drawLine(Display* display, 
+                       const PixelPoint& first, const PixelPoint& second, const Color& color,
+                       size_t thickness)
+{
+    int result = SDL_SetRenderTarget(display->renderer(), native_texture_);
+
+    display->drawLine(first, second, color, thickness);
+
+    SDL_SetRenderTarget(display->renderer(), nullptr);
+}
+
 void Texture::drawRectangle(Display* display, 
                             const Rectangle& rectangle, const Color& color)
 {
